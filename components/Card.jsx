@@ -1,16 +1,17 @@
+"use client";
 import Image from "next/image";
 
-export default function Card({ image, name }) {
+export default function Card(props) {
     return (
-        <div>
+        <div className="m-auto my-5">
             <Image
                 className="max-w-none"
-                src={image}
-                width={120}
-                height={120}
+                src={props.image}
+                width={props?.width ? props.width : 120}
+                height={props?.height ? props.width : 120}
                 alt="ReactJs"
             />
-            <p className="text-center">{name}</p>
+            <p className={`text-center my-5`}>{props.name}</p>
         </div>
     );
 }

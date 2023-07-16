@@ -3,7 +3,7 @@ import Border from "./Border";
 
 export default function Project(props) {
     return (
-        <div>
+        <div className="m-auto lg:m-0">
             <div className="relative w-fit">
                 <Border />
                 <Image
