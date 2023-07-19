@@ -8,7 +8,7 @@ import Contact from "@/sections/Contact";
 export default function Home() {
     return (
         <>
-            <main className="container mx-auto mt-6 mb-32 grid ">
+            <main className="container mx-auto grid">
                 <Nav />
                 <Header />
                 <AboutMe />

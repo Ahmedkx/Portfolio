@@ -8,8 +8,8 @@ import GitHub from "../imgs/github.png";
 
 export default function Contact() {
     return (
-        <div className="text-white relative">
-            <Circle className="-left-52 bg-gradient-to-tl" />
+        <div id="contact" className="text-white relative overflow-x-clip">
+            <Circle className="-left-52 bg-gradient-to-tl hidden md:block" />
             <Circle className="-right-52 bg-gradient-to-tr" />
             <div className="pt-px rounded-t-full bg-gradient-to-r from-[#4a35c2] to-[#719abb]/50 z-10">
                 <Title text="Contact" className="!my-0 py-10" />

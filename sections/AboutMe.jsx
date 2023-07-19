@@ -6,9 +6,9 @@ export default function AboutMe() {
     return (
         <div
             id="about-me"
-            className="flex flex-col gap-x-32 text-white md:flex-row"
+            className="flex flex-col gap-x-32 text-white lg:flex-row"
         >
-            <div className="flex col-span-1 relative">
+            <div className="flex col-span-1 relative w-fit m-auto lg:m-0">
                 <Border />
                 <Image
                     className="max-w-none"
@@ -18,7 +18,7 @@ export default function AboutMe() {
                     alt="image"
                 />
             </div>
-            <div className="flex col-span-1 flex-col justify-center">
+            <div className="flex col-span-1 flex-col justify-center  mt-14 lg:mt-0">
                 <h1 className="text-4xl">ABOUT ME</h1>
                 <p className=" mt-6">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
