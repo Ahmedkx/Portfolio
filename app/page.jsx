@@ -8,9 +8,9 @@ import Contact from "@/sections/Contact";
 export default function Home() {
     return (
         <>
+            <Nav />
+            <Header />
             <main className="container mx-auto grid">
-                <Nav />
-                <Header />
                 <AboutMe />
                 <Portfolio />
                 <Experience />
