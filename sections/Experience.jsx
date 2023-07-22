@@ -12,7 +12,7 @@ import NextJs from "../imgs/next-js.png";
 
 export default function Experience() {
     return (
-        <section className="text-white">
+        <section id="experience" className="text-white">
             <Title text="Experience" />
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
                 <Card image={ReactJs} name="React.JS" />

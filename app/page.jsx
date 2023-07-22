@@ -7,15 +7,13 @@ import Contact from "@/sections/Contact";
 
 export default function Home() {
     return (
-        <>
+        <main>
             <Nav />
             <Header />
-            <main className="container mx-auto grid">
-                <AboutMe />
-                <Portfolio />
-                <Experience />
-            </main>
+            <AboutMe />
+            <Portfolio />
+            <Experience />
             <Contact />
-        </>
+        </main>
     );
 }

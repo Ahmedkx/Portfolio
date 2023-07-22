@@ -6,7 +6,7 @@ export default function AboutMe() {
     return (
         <div
             id="about-me"
-            className="flex flex-col gap-x-32 text-white lg:flex-row"
+            className="container mx-auto flex flex-col gap-x-32 text-white lg:flex-row"
         >
             <div className="flex col-span-1 relative w-fit m-auto lg:m-0">
                 <Border />

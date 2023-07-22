@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Background from "@/components/Background";
+import NavLinks from "@/components/NavLinks";
 
 export default function Nav() {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -17,12 +18,6 @@ export default function Nav() {
         };
     }, []);
 
-    let Links = [
-        { name: "HOME", link: "/" },
-        { name: "ABOUT", link: "/" },
-        { name: "PROJECTS", link: "/" },
-        { name: "EXPERIANCE", link: "/" },
-    ];
     let [open, setOpen] = useState(false);
 
     return (
@@ -51,37 +46,27 @@ export default function Nav() {
                         </div>
                     </div>
 
-                    <AnimatePresence></AnimatePresence>
-                    <ul
-                        className={`z-10 md:flex md:items-center absolute md:static md:z-auto left-0 w-full md:w-auto md:pl-0 transition-all duration-500 top-20
-                        }`}
-                    >
-                        <Background
-                            show={scrollPosition < 50 || open ? true : false}
-                            className="md:hidden"
-                        />
-                        {Links.map((link) => (
-                            <li
-                                key={link.name}
-                                className="px-3 xl:px-0 md:pl-8 md:py-0 py-7 border-t border-[#ffffff26] md:border-none"
+                    <NavLinks className="hidden md:block" />
+
+                    <AnimatePresence>
+                        {open && (
+                            <motion.ul
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
                             >
-                                <a
-                                    href={`#${link.link}`}
-                                    className="hover:text-cyan-500 duration-500"
-                                >
-                                    {link.name}
-                                </a>
-                            </li>
-                        ))}
-                        <div className="px-3 xl:px-0 md:pl-8 md:py-0 py-7 border-b border-t border-[#ffffff26] md:border-none">
-                            <a
-                                href="#contact"
-                                className="gradient p-3 rounded-lg px-10 block w-full text-center"
-                            >
-                                Contact
-                            </a>
-                        </div>
-                    </ul>
+                                <Background
+                                    show={
+                                        scrollPosition < 50 || open
+                                            ? true
+                                            : false
+                                    }
+                                    className="md:hidden"
+                                />
+                                <NavLinks />
+                            </motion.ul>
+                        )}
+                    </AnimatePresence>
                 </nav>
             </div>
         </div>
