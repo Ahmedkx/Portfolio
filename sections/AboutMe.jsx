@@ -10,13 +10,17 @@ export default function AboutMe() {
         >
             <div className="flex col-span-1 relative w-fit m-auto lg:m-0">
                 <Border />
-                <Image
+
+                {/* <Image
                     className="max-w-none"
                     src={Picture}
                     width="400"
                     height="500"
                     alt="image"
-                />
+                /> */}
+                <video autoPlay muted>
+                    <source src="/animation.mp4" />
+                </video>
             </div>
             <div className="flex col-span-1 flex-col justify-center  mt-14 lg:mt-0">
                 <h1 className="text-4xl">ABOUT ME</h1>
