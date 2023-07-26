@@ -10,12 +10,12 @@ export default function Contact() {
     return (
         <div id="contact" className="text-white relative overflow-x-clip">
             <Circle className="-left-52 bg-gradient-to-tl hidden md:block" />
-            <Circle className="-right-52 bg-gradient-to-tr" />
+            <Circle className="-right-52 bg-gradient-to-tr hidden md:block" />
             <div className="pt-px rounded-t-full bg-gradient-to-r from-[#4a35c2] to-[#719abb]/50 z-10">
                 <Title text="Contact" className="!my-0 py-10" />
             </div>
 
-            <div className="flex flex-col px-40 container min-w-full py-10 bg-gradient-to-r from-[#4a35c2] to-[#719abb]/50 -z-10 ">
+            <div className="flex flex-col md:px-40 container min-w-full py-10 bg-gradient-to-r from-[#4a35c2] to-[#719abb]/50 -z-10 ">
                 <div className="flex flex-col xl:flex-row w-fit xl:w-auto place-content-between z-10 gap-20 ">
                     <div>
                         <p className="font-bold text-4xl">Drop Me A Message</p>
@@ -67,23 +67,23 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <form className="flex flex-col gap-5 px-10 py-12 rounded-3xl bg-gradient-to-r from-[#50aada] to-[#493bc4] drop-shadow-xl h-fit text-2xl">
+                    <form className="flex flex-col gap-5 px-10 py-12 rounded-3xl bg-gradient-to-r from-[#50aada] to-[#493bc4] drop-shadow-xl md:h-fit text-2xl m-10">
                         <input
                             type="text"
                             placeholder="Name"
-                            className="px-5 py-4 w-[450px] rounded-xl bg-[#101630]"
+                            className="px-5 py-4 w-full rounded-xl bg-[#101630]"
                             required
                         />
                         <input
                             type="email"
                             placeholder="Email"
-                            className="px-5 py-4 w-[450px] rounded-xl bg-[#101630]"
+                            className="px-5 py-4 w-full rounded-xl bg-[#101630]"
                             required
                         />
                         <textarea
                             rows={5}
                             placeholder="Message"
-                            className="px-5 py-4 w-[450px] rounded-xl bg-[#101630] resize-none"
+                            className="px-5 py-4 w-full rounded-xl bg-[#101630] resize-none"
                             required
                         />
                         <button className="bg-[#101630] m-auto xl:m-0 p-5 rounded-xl w-52 font-semibold">

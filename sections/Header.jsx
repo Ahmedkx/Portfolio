@@ -21,9 +21,14 @@ export default function Header() {
                         A Frontend Developer
                     </h1>
                 </div>
-                <div className="absolute bottom-32 left-[50%] bounce">
+                <div className="absolute bottom-32 left-[50%] bounce text-center">
                     <p>Scroll</p>
-                    <Image src="/" />
+                    <Image
+                        src="/arrow.png"
+                        width={35}
+                        height={35}
+                        className="m-auto"
+                    />
                 </div>
             </div>
         </div>

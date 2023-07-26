@@ -16,7 +16,7 @@ export default function Experience() {
             <Title text="Experience" />
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
                 <Card image={ReactJs} name="React.JS" />
-                <Card image={NextJs} name="Next.JS" width="200" />
+                <Card image={NextJs} name="Next.JS" width="250" />
                 <Card image={HTML} name="HTML" />
                 <Card image={CSS} name="CSS" />
                 <Card image={JS} name="Javascript" />

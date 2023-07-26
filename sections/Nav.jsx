@@ -18,13 +18,39 @@ export default function Nav() {
         };
     }, []);
 
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth);
+        }
+
+        window.addEventListener("resize", handleResize);
+
+        handleResize();
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, [setWidth]);
+
+    useEffect(() => {
+        if (width >= 768) {
+            setOpen(true);
+        } else if (width <= 768) {
+            setOpen(false);
+        }
+    }, [width >= 768]);
+
     let [open, setOpen] = useState(false);
 
     return (
         <div className="sticky top-0 z-10">
             <div
                 className={`relative ${
-                    scrollPosition > 50 ? "border-b border-[#ffffff26]" : null
+                    scrollPosition > 50 && !open
+                        ? "border-b border-[#ffffff26]"
+                        : null
                 }`}
             >
                 <Background show={scrollPosition < 50 || open ? true : false} />
@@ -46,27 +72,7 @@ export default function Nav() {
                         </div>
                     </div>
 
-                    <NavLinks className="hidden md:block" />
-
-                    <AnimatePresence>
-                        {open && (
-                            <motion.ul
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                            >
-                                <Background
-                                    show={
-                                        scrollPosition < 50 || open
-                                            ? true
-                                            : false
-                                    }
-                                    className="md:hidden"
-                                />
-                                <NavLinks />
-                            </motion.ul>
-                        )}
-                    </AnimatePresence>
+                    {open && <NavLinks />}
                 </nav>
             </div>
         </div>

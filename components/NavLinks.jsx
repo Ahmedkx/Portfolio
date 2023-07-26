@@ -1,3 +1,5 @@
+import Background from "./Background";
+
 export default function NavLinks() {
     let Links = [
         { name: "HOME", link: "home" },
@@ -7,15 +9,16 @@ export default function NavLinks() {
     ];
 
     return (
-        <ul className="md:flex md:items-center absolute md:static md:z-auto left-0 w-full md:w-auto md:pl-0 transition-all duration-500 top-20">
+        <ul className="md:flex md:items-center absolute md:static md:z-auto left-0 w-full md:w-auto md:pl-0 transition-all duration-500 top-[82px]">
+            <Background className="md:hidden" />
             {Links.map((link) => (
                 <li
                     key={link.name}
-                    className="px-3 md:pl-8 md:py-0 py-7 border-t border-[#ffffff26] md:border-none"
+                    className="md:pl-8 md:py-0 py-7 border-t border-[#ffffff26] md:border-none"
                 >
                     <a
                         href={`#${link.link}`}
-                        className="hover:text-cyan-500 duration-500"
+                        className="block px-3 md:px-0 container mx-auto hover:text-cyan-500 duration-500"
                         onClick={() => setOpen((p) => !p)}
                     >
                         {link.name}
