@@ -8,7 +8,7 @@ export default function AboutMe() {
             id="about-me"
             className="container mx-auto flex flex-col gap-x-32 text-white lg:flex-row"
         >
-            <div className="flex col-span-1 relative w-fit m-auto lg:m-0">
+            <div className="flex col-span-1 relative w-[80%] md:w-fit m-auto lg:m-0">
                 <Border />
 
                 {/* <Image
@@ -22,7 +22,7 @@ export default function AboutMe() {
                     <source src="/animation.mp4" />
                 </video>
             </div>
-            <div className="flex col-span-1 flex-col justify-center  mt-14 lg:mt-0">
+            <div className="flex col-span-1 flex-col justify-center mt-14 lg:mt-0 mx-10 md:mx-0">
                 <h1 className="text-4xl">ABOUT ME</h1>
                 <p className=" mt-6">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -30,7 +30,7 @@ export default function AboutMe() {
                     facere quae non, possimus incidunt, unde eveniet accusantium
                     expedita quos sunt asperiores dolor.
                 </p>
-                <div className="mt-12">
+                <div className="mt-12 mx-auto md:mx-0">
                     <a className="font-semibold gradient mr-6 px-6 py-3 rounded-lg">
                         HIRE ME
                     </a>
