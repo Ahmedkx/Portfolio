@@ -45,7 +45,7 @@ export default function Nav() {
     let [open, setOpen] = useState(false);
 
     return (
-        <div className="sticky top-0 z-10">
+        <div className="sticky top-0">
             <div
                 className={`relative ${
                     scrollPosition > 50 && !open
@@ -54,11 +54,11 @@ export default function Nav() {
                 }`}
             >
                 <Background show={scrollPosition < 50 || open ? true : false} />
-                <nav className="container mx-auto text-white z-10 flex items-center justify-between px-3 md:px-0 py-4 ">
+                <nav className="container mx-auto text-white z-30 flex items-center justify-between px-3 md:px-0 py-4 ">
                     <img
                         src="https://placehold.co/50x50"
                         alt="logo"
-                        className="z-10"
+                        className="z-30"
                     />
 
                     <div
