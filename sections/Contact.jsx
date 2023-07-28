@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Contact() {
     return (
-        <div id="contact" className="container">
+        <div id="contact" className="container mx-auto flex text-white">
             <video autoPlay muted>
                 <source src="/contact.mp4" />
             </video>
