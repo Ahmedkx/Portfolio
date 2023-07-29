@@ -9,7 +9,7 @@ export default function NavLinks() {
     ];
 
     return (
-        <ul className="md:flex md:items-center absolute md:static md:z-auto left-0 w-full md:w-auto md:pl-0 transition-all duration-500 top-[82px]">
+        <ul className="md:flex md:items-center absolute md:static md:z-20 left-0 w-full md:w-auto md:pl-0 transition-all duration-500 top-[82px]">
             <Background className="md:hidden" />
             {Links.map((link) => (
                 <li

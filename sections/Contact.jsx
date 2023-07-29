@@ -3,9 +3,9 @@
 
 export default function Contact() {
     return (
-        <>
+        <div className="flex text-white">
 
-            <div className="flex bg-gradient-to-r from-[#50aada] to-[#493bc4]">
+            <div className="flex bg-gradient-to-r from-[#50aada] to-[#493bc4] basis-6/12	">
                 <video
                     autoPlay
                     muted
@@ -15,10 +15,11 @@ export default function Contact() {
                 >
                     <source src="/contact.mp4" />
                 </video>
-                        </div>
-                <div>a
+            </div>
 
-                <form className="flex flex-col gap-5 px-10 py-12 rounded-3xl bg-gradient-to-r from-[#50aada] to-[#493bc4] drop-shadow-xl md:h-fit text-2xl md:m-10">
+                <div className="bg-purple-500 basis-6/12">
+
+                <form className="flex flex-col gap-5 px-10 py-12 rounded-3xl drop-shadow-xl md:h-fit text-2xl md:m-10">
                     <input
                         type="text"
                         placeholder="Name"
@@ -42,6 +43,6 @@ export default function Contact() {
                     </button>
                 </form>
                 </div>
-        </>
+        </div>
     );
 }
