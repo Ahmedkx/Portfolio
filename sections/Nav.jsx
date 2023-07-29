@@ -45,6 +45,7 @@ export default function Nav() {
     let [open, setOpen] = useState(false);
 
     return (
+     
         <div className="sticky top-0">
             <div
                 className={`relative ${

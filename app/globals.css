@@ -210,3 +210,45 @@ body {
     font-family: "Noto Sans", sans-serif;
     font-family: "Poppins", sans-serif;
 }
+
+/* .animatedBorder {
+    --angle: 0deg;
+    border-bottom: 5px solid;
+    border-radius: 0 0 20px 20px;
+    border-image: linear-gradient(var(--angle), #12c2e9, #c471ed, #f64f59) 1;
+    animation: 5s rotate linear infinite;
+  }
+  
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  } */
+
+  .gradient-background {
+    /* background: linear-gradient(324deg,#b66d0e,#f3b0b4,#38b300,#132fc3,#a9cfc4); */
+    background: linear-gradient(
+        90deg,
+        rgba(80, 172, 219, 1) 0%,
+        rgba(75, 29, 196, 1) 100%
+    );
+    background-size: 300% 300%;
+    animation: gradient-animation 30s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
