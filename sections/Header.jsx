@@ -28,6 +28,7 @@ export default function Header() {
                         width={35}
                         height={35}
                         className="m-auto"
+                        alt="arrow"
                     />
                 </div>
             </div>
