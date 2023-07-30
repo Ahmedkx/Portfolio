@@ -17,6 +17,7 @@ body {
 
 .sky-body {
     /* background: linear-gradient(125deg, #00103a, #3e5f77 100%); */
+    /* background: linear-gradient(0deg, #00103a, #3e5f778a 100%); */
 }
 
 .sky-container {
@@ -230,7 +231,7 @@ body {
     inherits: false;
   } */
 
-  .gradient-background {
+.gradient-background {
     /* background: linear-gradient(324deg,#b66d0e,#f3b0b4,#38b300,#132fc3,#a9cfc4); */
     background: linear-gradient(
         90deg,
@@ -239,16 +240,16 @@ body {
     );
     background-size: 300% 300%;
     animation: gradient-animation 30s ease infinite;
-  }
-  
-  @keyframes gradient-animation {
+}
+
+@keyframes gradient-animation {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
+}

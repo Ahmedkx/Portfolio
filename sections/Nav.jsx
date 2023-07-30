@@ -41,19 +41,18 @@ export default function Nav() {
         };
     }, [setWidth]);
 
-    useEffect(() => {
-        if (width >= 768) {
-            setOpen(true);
-        } else if (width <= 768) {
-            setOpen(false);
-        }
-    }, [width >= 768]);
+    // useEffect(() => {
+    //     if (width >= 768) {
+    //         setOpen(true);
+    //     } else if (width <= 768) {
+    //         setOpen(false);
+    //     }
+    // }, [width >= 768]);
 
     let [open, setOpen] = useState(false);
 
     return (
-     
-        <header className="sticky top-0">
+        <header className="sticky top-0 bg-[#101630] z-20">
             <div
                 className={`relative ${
                     scrollPosition > 50 && !open
@@ -61,14 +60,13 @@ export default function Nav() {
                         : null
                 }`}
             >
-                <Background show={scrollPosition < 50 || open ? true : false} className="z-30"/>
-                <nav className="container mx-auto text-white z-20 flex items-center justify-between px-3 md:px-0 py-4 ">
+                <nav className="container mx-auto text-white z-20 flex items-center justify-between px-3 md:px-0 py-4">
                     <img
                         src="https://placehold.co/50x50"
                         alt="logo"
                         className="z-30"
                     />
-                        {/* Burger Icon */}
+                    {/* Burger Icon */}
                     <div
                         onClick={() => setOpen(!open)}
                         className="relative right-0 cursor-pointer md:hidden"
@@ -80,32 +78,40 @@ export default function Nav() {
                         </div>
                     </div>
 
-
-                    <ul className={`${open ? "block" : "hidden"}md:flex md:items-center absolute md:static md:z-30 left-0 w-full md:w-auto md:pl-0 transition-all duration-500 top-[82px]`}>
-            {Links.map((link) => (
-                <li
-                    key={link.name}
-                    className="md:pl-8 md:py-0 py-7 border-t border-[#ffffff26] md:border-none"
-                >
-                    <a
-                        href={`#${link.link}`}
-                        className="block px-3 md:px-0 container mx-auto hover:text-cyan-500 duration-500"
-                        onClick={() => setOpen((p) => !p)}
+                    {/* Menu Links */}
+                    <ul
+                        className={`${
+                            open ? "block" : "hidden"
+                        } md:flex md:items-center absolute md:static left-0 w-full md:w-auto md:pl-0 transition-all duration-500 top-[82px] bg-[#101630]`}
                     >
-                        {link.name}
-                    </a>
-                </li>
-            ))}
-            <div className="px-3 md:pl-8 md:py-0 py-7 border-b border-t border-[#ffffff26] md:border-none">
-                <a
-                    href="#contact"
-                    className="gradient p-3 rounded-lg px-10 block w-full text-center"
-                    onClick={() => setOpen((p) => !p)}
-                >
-                    Contact
-                </a>
-            </div>
-        </ul>
+                        {/* <Background
+                            show={scrollPosition < 50 || open ? true : false}
+                            className=""
+                        /> */}
+                        {Links.map((link) => (
+                            <li
+                                key={link.name}
+                                className="z-30 md:pl-8 md:py-0 py-7 border-t border-[#ffffff26] md:border-none"
+                            >
+                                <a
+                                    href={`#${link.link}`}
+                                    className="block px-3 md:px-0 container mx-auto hover:text-cyan-500 duration-500"
+                                    onClick={() => setOpen((p) => !p)}
+                                >
+                                    {link.name}
+                                </a>
+                            </li>
+                        ))}
+                        <div className="px-3 md:pl-8 md:py-0 py-7 border-b border-t border-[#ffffff26] md:border-none">
+                            <a
+                                href="#contact"
+                                className="gradient p-3 rounded-lg px-10 block w-full text-center"
+                                onClick={() => setOpen((p) => !p)}
+                            >
+                                Contact
+                            </a>
+                        </div>
+                    </ul>
                 </nav>
             </div>
         </header>
