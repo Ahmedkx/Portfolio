@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    /* scroll-snap-type: y mandatory; */
+}
+
 body {
     background-color: #101630;
+}
+
+section {
+    /* height: calc(100vh - 80px);  */
+    /* scroll-snap-align: start; */
+    /* scroll-snap-stop: always; */
 }
 
 .gradient {
@@ -239,7 +249,7 @@ body {
         rgba(75, 29, 196, 1) 100%
     );
     background-size: 300% 300%;
-    animation: gradient-animation 30s ease infinite;
+    animation: gradient-animation 15s ease infinite;
 }
 
 @keyframes gradient-animation {
@@ -251,5 +261,73 @@ body {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+/* Contact Box Animation */
+
+.animated-border-box,
+.animated-border-box-glow {
+    max-height: 500px;
+    max-width: 550px;
+    height: 100%;
+    width: 100%;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    /* Border Radius */
+    border-radius: 10px;
+}
+
+.animated-border-box-glow {
+    overflow: hidden;
+    /* Glow Blur */
+    filter: blur(20px);
+}
+
+.animated-border-box:before,
+.animated-border-box-glow:before {
+    content: "";
+    z-index: -2;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    position: absolute;
+    width: 99999px;
+    height: 99999px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    /*border color, change middle color*/
+    background-image: conic-gradient(
+        rgba(0, 0, 0, 0),
+        #1976ed,
+        rgba(0, 0, 0, 0) 25%
+    );
+    /* change speed here */
+    animation: rotate 4s linear infinite;
+}
+
+.animated-border-box:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    /* border width */
+    left: 5px;
+    top: 5px;
+    /* double the px from the border width left */
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    /*bg color*/
+    background: #292a2e;
+    /*box border radius*/
+    border-radius: 7px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: translate(-50%, -50%) rotate(1turn);
     }
 }

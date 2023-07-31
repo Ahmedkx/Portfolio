@@ -1,48 +1,36 @@
 // import Container from "@/components/Container";
-// import Title from "@/components/Title";
+import Title from "@/components/Title";
 
 export default function Contact() {
     return (
-        <div className="flex text-white">
+        <section>
+            <div className="text-white">
+                <Title text="Contact Me" />
 
-            <div className="flex bg-gradient-to-r from-[#50aada] to-[#493bc4] basis-6/12	">
-                <video
-                    autoPlay
-                    muted
-                    className="hidden lg:block rounded-lg"
-                    width={400}
-                    height={400}
-                >
-                    <source src="/contact.mp4" />
-                </video>
-            </div>
-
-                <div className="bg-purple-500 basis-6/12">
-
-                <form className="flex flex-col gap-5 px-10 py-12 rounded-3xl drop-shadow-xl md:h-fit text-2xl md:m-10">
+                <form className="w-11/12 md:w-96 m-auto bg-gradient-to-r from-[#50aada] to-[#493bc4] flex flex-col gap-5 px-10 py-12 rounded-3xl drop-shadow-xl text-2xl">
                     <input
                         type="text"
                         placeholder="Name"
-                        className="px-5 py-4 w-full rounded-xl bg-[#101630]"
+                        className="px-5 py-4 rounded-xl bg-[#101630]"
                         required
                     />
                     <input
                         type="email"
                         placeholder="Email"
-                        className="px-5 py-4 w-full rounded-xl bg-[#101630]"
+                        className="px-5 py-4 rounded-xl bg-[#101630]"
                         required
                     />
                     <textarea
                         rows={5}
                         placeholder="Message"
-                        className="px-5 py-4 w-full rounded-xl bg-[#101630] resize-none"
+                        className="px-5 py-4 rounded-xl bg-[#101630] resize-none"
                         required
                     />
                     <button className="bg-[#101630] m-auto xl:m-0 p-5 rounded-xl w-52 font-semibold">
                         Send
                     </button>
                 </form>
-                </div>
-        </div>
+            </div>
+        </section>
     );
 }

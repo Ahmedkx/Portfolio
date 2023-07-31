@@ -6,7 +6,7 @@ import Container from "@/components/Container";
 
 export default function Portfolio() {
     return (
-        <>
+        <section>
             <Container className="text-white">
                 <Title text="Portfolio" />
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
@@ -17,6 +17,6 @@ export default function Portfolio() {
                     <Project image={clone} name="E Commerce Project" />
                 </div>
             </Container>
-        </>
+        </section>
     );
 }
