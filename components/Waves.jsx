@@ -1,13 +1,12 @@
-import React from 'react'
+import React from "react";
 
-export default function Waves({children}) {
+export default function Waves() {
   return (
-    <div className='relative w-full h-72 overflow-hidden'>
-
-<div class="ocean">
-  <div class="wave"></div>
-  <div class="wave"></div>
-</div>
+    <div className="relative w-full h-72 overflow-hidden">
+      <div className="ocean">
+        <div className="wave"></div>
+        <div className="wave"></div>
+      </div>
     </div>
-  )
+  );
 }
