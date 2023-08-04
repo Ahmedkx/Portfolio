@@ -9,7 +9,7 @@ export default function Title({ text, className }) {
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
+                transition={{ delay: 0.2 }}
             >
                 <div className="absolute gradient-background w-full h-1 bottom-[-15px] rounded-3xl"></div>
             </motion.div>
