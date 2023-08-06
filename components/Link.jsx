@@ -3,14 +3,20 @@
 import React from "react";
 import Image from "next/image";
 
-export default function Link({ src, link }) {
+export default function Link({ src, type, link }) {
+  console.log(type);
+
   return (
-    <div
+    <a
       className="flex gap-5 items-center my-6 hover:bg-sky-400/30 transition-all py-3 pl-2 pr-12 rounded-xl cursor-pointer"
       onClick={(e) => {
-        window.location.href = "mailto:no-reply@example.com";
-        e.preventDefault();
+        if (type == "mail") {
+          window.location.href = `mailto:${link}`;
+          e.preventDefault();
+        }
       }}
+      href={type != "mail" ? link : null}
+      target="_blank"
     >
       <div className="bg-[#4d9dd6] p-2 w-fit rounded-lg">
         <Image
@@ -22,6 +28,6 @@ export default function Link({ src, link }) {
         ></Image>
       </div>
       <p>{link}</p>
-    </div>
+    </a>
   );
 }
