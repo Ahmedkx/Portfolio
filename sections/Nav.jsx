@@ -61,11 +61,12 @@ export default function Nav() {
                 }`}
             >
                 <nav className="container mx-auto text-white z-20 flex items-center justify-between px-3 md:px-0 py-4">
-                    <img
+                    {/* <img
                         src="https://placehold.co/50x50"
                         alt="logo"
                         className="z-30"
-                    />
+                    /> */}
+                    <div className="text-3xl">Portfolio.</div>
                     {/* Burger Icon */}
                     <div
                         onClick={() => setOpen(!open)}
