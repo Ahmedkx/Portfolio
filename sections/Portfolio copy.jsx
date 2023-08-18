@@ -9,7 +9,8 @@ export default function Portfolio() {
         <section>
             <Container className="text-white">
                 <Title text="Portfolio" />
-                <div className="flex flex-wrap justify-center gap-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
+                    <Project image={clone} name="E Commerce Project" />
                     <Project image={clone} name="E Commerce Project" />
                     <Project image={clone} name="E Commerce Project" />
                     <Project image={clone} name="E Commerce Project" />
