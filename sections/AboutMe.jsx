@@ -5,7 +5,7 @@ import Container from "@/components/Container";
 
 export default function AboutMe() {
     return (
-        <section id="about">
+        <section id="about" className="scroll-mt-10">
             <Container className="max-w-[85rem]">
                 <div
                     id="about-me"

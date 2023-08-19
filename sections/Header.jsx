@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "@/components/Container";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Image from "next/image";
@@ -23,7 +25,12 @@ export default function Header() {
                             A Frontend Developer
                         </h1>
                     </div>
-                    <div className="absolute bottom-10 left-[50%] bounce text-center">
+                    <div
+                        className="absolute bottom-10 left-[50%] bounce text-center p-1 cursor-pointer"
+                        onClick={() =>
+                            document.getElementById("about").scrollIntoView()
+                        }
+                    >
                         <p>Scroll</p>
                         <Image
                             src="/arrow.png"

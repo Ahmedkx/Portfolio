@@ -13,7 +13,7 @@ import Container from "@/components/Container";
 
 export default function Experience() {
     return (
-        <section id="experience" className="text-white">
+        <section id="experience" className="text-white scroll-mt-24">
             <Title text="Experience" />
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
                 <Card image={HTML} name="HTML" />
