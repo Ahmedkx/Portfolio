@@ -8,7 +8,7 @@ export default function Link({ src, type, link }) {
 
     return (
         <a
-            className="flex gap-5 items-center my-6 hover:bg-sky-400/30 transition-all py-3 pl-2 pr-12 rounded-xl cursor-pointer"
+            className="flex gap-5 items-center my-6 hover:bg-sky-400/30 transition-all py-3 pl-2 pr-12 rounded-xl cursor-pointer w-64"
             onClick={(e) => {
                 if (type == "mail") {
                     window.location.href = `mailto:${link}`;
