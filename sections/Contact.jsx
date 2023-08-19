@@ -13,13 +13,12 @@ export default function Contact() {
             <div className="text-white mb-16">
                 <Title text="Contact Me" className="mb-10 md:mb-20" />
 
-                <Container>
+                <Container className="max-w-[80rem]">
                     <div className="flex flex-col md:flex-row gap-10 justify-between">
                         <div className="flex flex-col items-center md:items-start justify-center">
                             <p className="hidden md:block text-3xl font-bold mb-10">
                                 Drop Me a Message
                             </p>
-
                             <Link
                                 src={Email}
                                 type="mail"
@@ -29,7 +28,6 @@ export default function Contact() {
                             <Link src={GitHub} link="www.google.com" />
                         </div>
 
-                        {/* w-11/12 md:w-96  */}
                         <form className="bg-gradient-to-r from-[#50aada] to-[#493bc4] flex flex-col gap-5 px-10 py-12 rounded-3xl drop-shadow-xl text-2xl">
                             <input
                                 type="text"
