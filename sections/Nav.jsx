@@ -76,9 +76,7 @@ export default function Nav() {
         <header className="sticky top-0 bg-[#101630] z-20 h-[82px]">
             <div
                 className={`relative ${
-                    scrollPosition > 50 && !open
-                        ? "border-b border-[#ffffff26]"
-                        : null
+                    scrollPosition > 50 ? "border-b border-[#ffffff26]" : null
                 }`}
             >
                 <nav className="container mx-auto text-white z-20 flex items-center justify-between px-3 md:px-0 py-4">
@@ -103,7 +101,7 @@ export default function Nav() {
                     <ul
                         className={`${
                             open ? "block" : "hidden"
-                        } md:flex md:items-center absolute md:static left-0 w-full md:w-auto md:pl-0 transition-all duration-500 top-[82px] bg-[#101630]`}
+                        } md:flex md:items-center absolute md:static left-0 w-full md:w-auto md:pl-0 transition-all duration-500 top-[68px] bg-[#101630]`}
                     >
                         {/* <Background
                             show={scrollPosition < 50 || open ? true : false}
@@ -126,7 +124,7 @@ export default function Nav() {
                         <div className="px-3 md:pl-8 md:py-0 py-7 border-b border-t border-[#ffffff26] md:border-none">
                             <a
                                 href="#contact"
-                                className="font-bold gradient p-3 rounded-lg px-10 block w-full text-center"
+                                className="font-bold button p-3 rounded-lg px-10 block w-full text-center"
                                 onClick={() => setOpen((p) => !p)}
                             >
                                 Contact

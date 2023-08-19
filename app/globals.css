@@ -16,7 +16,7 @@ body {
     box-shadow: 0px 10px 30px 0px rgba(0, 178, 255, 0.35);
 }
 
-.projectButton {
+.button {
     background: linear-gradient(
         270deg,
         #13adc7 0%,
@@ -26,7 +26,7 @@ body {
     box-shadow: 0px 10px 30px 0px rgba(0, 178, 255, 0.35);
 }
 
-.projectButton:hover {
+.button:hover {
     background: linear-gradient(
         270deg,
         #31cbe5 0%,
@@ -36,7 +36,7 @@ body {
     box-shadow: 0px 10px 30px 0px rgba(0, 178, 255, 0.5);
 }
 
-.projectButton:active {
+.button:active {
     background: linear-gradient(
         270deg,
         #008fa9 0%,
@@ -47,7 +47,6 @@ body {
 }
 
 .gradient {
-    /* background: rgb(80, 172, 219); */
     background: linear-gradient(
         90deg,
         rgba(80, 172, 219, 1) 0%,

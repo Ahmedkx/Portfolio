@@ -26,7 +26,7 @@ export default function Project(props) {
                 </p>
             </div>
             <div className="flex gap-5 pt-14 justify-center flex-col md:flex-row">
-                <button className="projectButton pt-[25px] pb-[26px] px-[51px] rounded-[60px] font-semibold">
+                <button className="button pt-[25px] pb-[26px] px-[51px] rounded-[60px] font-semibold">
                     Live preview
                 </button>
                 <button className="pt-[25px] pb-[26px] px-[51px] rounded-[60px] font-semibold border-[1.2px] border-white hover:bg-white hover:text-black active:text-white active:bg-transparent transition-all">

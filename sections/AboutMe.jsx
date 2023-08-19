@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Picture from "../imgs/Untitled.png";
+"use client";
+
 import Border from "../components/Border";
 import Container from "@/components/Container";
 
@@ -35,10 +35,17 @@ export default function AboutMe() {
                             sunt asperiores dolor.
                         </p>
                         <div className="mt-12 mx-auto md:mx-0">
-                            <a className="font-semibold gradient mr-6 px-6 py-3 rounded-lg">
+                            <a
+                                className="font-semibold button mr-6 px-6 py-3 rounded-lg cursor-pointer"
+                                onClick={() =>
+                                    document
+                                        .getElementById("contact")
+                                        .scrollIntoView()
+                                }
+                            >
                                 HIRE ME
                             </a>
-                            <a className="font-semibold border-2 border-purple-600 mr-6 px-6 py-3 rounded-lg">
+                            <a className="font-semibold border-2 border-purple-600 hover:border-transparent hover:bg-purple-700 mr-6 px-6 py-3 rounded-lg cursor-pointer">
                                 RESUME
                             </a>
                         </div>
