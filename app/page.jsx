@@ -12,10 +12,10 @@ export default function Home() {
             <Nav />
             <Header />
             <AboutMe />
-            <Portfolio />
             <Experience />
+            <Portfolio />
             <Contact />
-            <Footer />
+            {/* <Footer /> */}
         </main>
     );
 }

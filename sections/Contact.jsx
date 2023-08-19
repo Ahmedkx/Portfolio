@@ -10,11 +10,11 @@ import Link from "@/components/Link";
 export default function Contact() {
     return (
         <section>
-            <Container>
-                <div className="text-white">
-                    <Title text="Contact Me" className="mb-10 md:mb-20" />
+            <div className="text-white mb-16">
+                <Title text="Contact Me" className="mb-10 md:mb-20" />
 
-                    <div className="flex flex-col md:flex-row gap-10 justify-around mx-10">
+                <Container>
+                    <div className="flex flex-col md:flex-row gap-10 justify-between">
                         <div className="flex flex-col items-center md:items-start justify-center">
                             <p className="hidden md:block text-3xl font-bold mb-10">
                                 Drop Me a Message
@@ -54,8 +54,8 @@ export default function Contact() {
                             </button>
                         </form>
                     </div>
-                </div>
-            </Container>
+                </Container>
+            </div>
         </section>
     );
 }

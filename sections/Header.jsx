@@ -1,9 +1,10 @@
 import Container from "@/components/Container";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Image from "next/image";
 
 export default function Header() {
     return (
-        <section>
+        <section id="home">
             <div className="overflow-hidden text-white relative h-[calc(100vh-82px)]">
                 <div className="sky-container absolute">
                     <div className="star"></div>
@@ -34,6 +35,7 @@ export default function Header() {
                     </div>
                 </div>
             </div>
+            <ScrollToTopButton />
         </section>
     );
 }
