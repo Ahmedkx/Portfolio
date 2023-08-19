@@ -9,7 +9,7 @@ import Link from "@/components/Link";
 
 export default function Contact() {
     return (
-        <section>
+        <section id="contact">
             <div className="text-white mb-16">
                 <Title text="Contact Me" className="mb-10 md:mb-20" />
 
