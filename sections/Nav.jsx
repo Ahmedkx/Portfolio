@@ -73,7 +73,7 @@ export default function Nav() {
     //         </div>
 
     return (
-        <header className="sticky top-0 bg-[#101630] z-20">
+        <header className="sticky top-0 bg-[#101630] z-20 h-[82px]">
             <div
                 className={`relative ${
                     scrollPosition > 50 && !open
