@@ -22,10 +22,10 @@ export default function Contact() {
                             <Link
                                 src={Email}
                                 type="mail"
-                                link="Email.mail.com"
+                                link="email@mail.com"
                             />
                             <Link src={LinkedIN} link="google.com" />
-                            <Link src={GitHub} link="www.google.com" />
+                            <Link src={GitHub} link="Ahmedkx" />
                         </div>
 
                         <form className="bg-gradient-to-r from-[#50aada] to-[#493bc4] flex flex-col gap-5 px-10 py-12 rounded-3xl drop-shadow-xl text-2xl">
